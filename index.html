@@ -10,34 +10,41 @@
     <header>
         <h1>Photography Portfolio</h1>
         <nav>
+            <ul>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="add-photo.html">Add photo</a>
+        </ul>
         </nav>
     </header>
 
-    <main>  
-         <section>
-        <h1>Welcome to My Portfolio</h1>
+    <main> 
+
+      <section>
+            <div class="heading">
+            <h1>Welcome to My Portfolio</h1>
         <p>Explore a selection of my best photographs.</p>
-  
+    </div>
         <div class="gallery">
-          <img src="./2149155620.jpg" alt="Green tall trees" />
-          <img src="./22472.jpg" alt="Green forest" />
-          <img src="./28154.jpg" alt="Two deers in a forest" />
+          <img src="2149155620.jpg" alt="Green tall trees" />
+          <img src="22472.jpg" alt="Green forest" />
+          <img src="28154.jpg" alt="Two deers in a forest" />
           
 
 
-          <img src="./2147680635.jpg" alt="grilled meat" />
-          <img src="./14554.jpg" alt="Breakfast Pancakes" />
-          <img src="./47517.jpg" alt="sandwich with boiled egg" />
+          <img src="2147680635.jpg" alt="grilled meat and rice" />
+          <img src="14554.jpg" alt="fast fooods" />
+          <img src="47517.jpg" alt="fried potatoes with meat" />
           
 
 
-          <img src="./2151915106.jpg" alt="" />
-          <img src="./2148105337.jpg" alt="" />
-          <img src="./29021.jpg" alt="" />
+          <img src="2151915106.jpg" alt="model with a black outfit" />
+          <img src="2148105337.jpg" alt="model with a denim jacket" />
+          <img src="29021.jpg" alt=" model with a red coat" />
           
+          <section class="gallery">
+            <h2>My Photography Gallery</h2>
+            <div id="PhotoGallery"></div> </section>
 
  </div>
 
@@ -49,6 +56,20 @@
         <small>IMAGES BY: <a href="https://www.freepik.com" target="_blank">Freepik</a></small>
 
     </footer>
-    <script> src="script.js" </script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          const photoGallery = document.getElementById("photoGallery");
+          const photos = JSON.parse(localStorage.getItem("photos")) || [];
+      
+          photos.forEach(src => {
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = "Uploaded Photo";
+            img.classList.add("gallery-image");
+            photoGallery.appendChild(img);
+          });
+        });
+      </script> 
 </body>
 </html>

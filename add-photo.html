@@ -16,7 +16,35 @@
         </nav>
     </header>
     <main>
-        <form id="photoform">
-            <label for="title">Photo</label>
-        </form>
+            <form id="photoForm">
+                <label for="photo">Upload a Photo:</label>
+                <input type="file" id="photo" accept="image/*" required />
+                <button type="submit">Add Photo</button>
+            </form>
     </main>
+                <script>
+                    document.getElementById("photoForm").addEventListener("submit", function (e) {
+                      e.preventDefault();
+                      const fileInput = document.getElementById("photo");
+                      const file = fileInput.files[0];
+                  
+                      if (!file) {
+                        alert("Please select a photo to upload!");
+                        return;
+                      }
+                  
+                      const reader = new FileReader();
+                      reader.onload = function () {
+                        let photos = JSON.parse(localStorage.getItem("photos")) || [];
+                        photos.push(reader.result);
+                        localStorage.setItem("photos", JSON.stringify(photos));
+                        alert("Photo added successfully!");
+                        fileInput.value = ""; 
+                      };
+                      reader.readAsDataURL(file);
+                    });
+                  </script>
+      <script src="script.js"></script>
+            </body>
+       </html>
+    
