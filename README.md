@@ -1,4 +1,4 @@
-### Photography_website
+   # Photography_website
 
     ## Project details
   This project enables the user to contribute in uploading photos.Hence
@@ -16,6 +16,6 @@
     ## Known issues
   No user authentication so anyone can upload images which may cause an issue.
 
-  Images are stored locally
+  Images are stored locally.
 
-  Uploaded photos may be lost
+  Uploaded photos may be lost.
