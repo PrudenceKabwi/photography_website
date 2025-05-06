@@ -17,9 +17,13 @@
     </header>
     <main>
             <form id="photoForm">
-                <label for="photo">Upload a Photo:</label>
+                <label for="photo">UPLOAD A PHOTO:</label>
+
                 <input type="file" id="photo" accept="image/*" required />
-                <button type="submit">Add Photo</button>
+                <label for="caption">Caption:</label>
+            <input type="text" id="caption" placeholder="Enter a caption" />
+
+                <button type="submit">ADD A PHOTO</button>
             </form>
     </main>
                 <script>
@@ -29,9 +33,11 @@
                       const file = fileInput.files[0];
                   
                       if (!file) {
-                        alert("Please select a photo to upload!");
+                        alert("Please select a file");
                         return;
                       }
+                      const caption = document.getElementById("caption").value;
+                      photos.push({ image: reader.result, caption });
                   
                       const reader = new FileReader();
                       reader.onload = function () {
@@ -44,8 +50,6 @@
                       reader.readAsDataURL(file);
                     });
                   </script>
-      <script src="script.js"></script>
-    
-            </body>
+     </body>
        </html>
     
