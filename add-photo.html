@@ -36,10 +36,7 @@
                         alert("Please select a file");
                         return;
                       }
-                      const caption = document.getElementById("caption").value;
-                      photos.push({ image: reader.result, caption });
-                  
-                      const reader = new FileReader();
+                  const reader = new FileReader();
                       reader.onload = function () {
                         let photos = JSON.parse(localStorage.getItem("photos")) || [];
                         photos.push(reader.result);
