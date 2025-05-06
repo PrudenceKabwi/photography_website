@@ -39,12 +39,8 @@ body {
   
   
   .about-section {
-    text-align: center;
-  }
-  
-  .profile-img {
-    max-width: 160px;
-    border-radius: 50%;
+    text-align: left;
+    max-width:400px;
   }
   
   form {
