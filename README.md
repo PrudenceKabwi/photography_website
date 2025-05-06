@@ -1,10 +1,10 @@
    # Photography_website
 
-    ## Project details
+  ## Project details
   This project enables the user to contribute in uploading photos.Hence
   allows the user to interact with the project.
 
-    ## Technology used
+  ## Technology used
   CSS
 
   HTML
@@ -13,7 +13,7 @@
 
   GitHub
 
-    ## Known issues
+  ## Known issues
   No user authentication so anyone can upload images which may cause an issue.
 
   Images are stored locally.
