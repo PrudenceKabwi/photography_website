@@ -8,6 +8,7 @@
 </head>
 <body>
   <header>
+    <h1>Contact Me Form</h1>
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
@@ -20,10 +21,10 @@
   <main>
     <section>
                        <h1>CONTACT ME</h1>
-                       <div class="pic">
+                       <div class="building">
                        <img src="1993.jpg" alt="building">
                       </div>
-
+<div class=" class-container"></div>
       <form id="contactForm">
         <label for="name">Your Name:</label>
         <input type="text" id="name" placeholder="Enter Your Name" required />
@@ -33,41 +34,13 @@
      <textarea id="message" placeholder="Type Your Message" required></textarea>
         <button type="submit">Send</button>
       </form>
+      
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 My Photography</p>
+     <p>&copy;2025 Sofia Smith Photography | All Rights Reserved</p>
   </footer>
-
-  <script>
-    const messagesList = document.getElementById("messages"); 
-
-document.getElementById("contactForm").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const contact = {
-    name: document.getElementById("name").value.trim(),
-    email: document.getElementById("email").value.trim(),
-    message: document.getElementById("message").value.trim(),
-  };
-
-  if (!contact.name || !contact.email || !contact.message) {
-    alert("All fields are required!");
-    return;
-  }
-
-  const contacts = JSON.parse(localStorage.getItem("contacts")) || [];
-  contacts.push(contact); 
-  localStorage.setItem("contacts", JSON.stringify(contacts)); 
-
-  const listItem = document.createElement("li");
-  listItem.textContent = `${contact.name} - ${contact.email}: ${contact.message}`;
-  messagesList.appendChild(listItem);
-
-  this.reset();
-})
-  
   </script>
 </body>
 </html>
