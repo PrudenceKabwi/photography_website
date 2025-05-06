@@ -9,18 +9,21 @@
 <body>
   <header>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="add-photo.html">Add photo</a>
+        <a href="contact.html">Contact</a>
 
-    </nav>
+ </nav>
   </header>
 
   <main>
     <section>
-      <h1>Contact Me</h1>
+                       <h1>CONTACT ME</h1>
+                       <div class="pic">
+                       <img src="1993.jpg" alt="building">
+                      </div>
+
       <form id="contactForm">
         <label for="name">Your Name:</label>
         <input type="text" id="name" placeholder="Enter Your Name" required />
@@ -30,10 +33,6 @@
      <textarea id="message" placeholder="Type Your Message" required></textarea>
         <button type="submit">Send</button>
       </form>
-    </section>
-    <section id="messageList">
-      <h2>Previous Message</h2>
-      <ul id="messages"></ul>
     </section>
   </main>
 

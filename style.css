@@ -13,7 +13,7 @@ body {
   }
   
   nav a {
-    margin: 0 15px;
+    margin: 15px;
     color:pink;
     text-decoration: none;
   }
@@ -39,11 +39,21 @@ body {
   
   
   .about-section {
-    text-align: left;
-    max-width:400px;
+    text-align:center;
+    max-width:500px;
   }
-  
-  form {
+  .about-section h2{
+    text-align:center;
+    max-width:500px;
+
+  }
+
+
+  .about-section p{
+    max-width: 800px;
+   text-align: left;
+        }
+   form {
     max-width: 400px;
     margin: auto;
     display: flex;
@@ -81,16 +91,16 @@ body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 
-  }
-  .contact button{
-    padding:10px;
-    background-color: white;
-    border-radius: 6px;
 }
-.contact form{
-  display: flex;
-  flex-direction: column;
-  margin: 20px;
-  text-align: left;
-  max-width: 400px;
+
+h2{
+  color:black;
+  font-size: xx-large;
+  text-align: right;
+
+}
+.myprofile{
+  max-width:550px;
+  width: 350px;
+ margin: 10px;
 }
